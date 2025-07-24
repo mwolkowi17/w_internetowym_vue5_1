@@ -16,15 +16,29 @@ onMounted(() => {
 
 })
 
+// const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść, musisz odpowiedzieć "+
+//        " prawidłowo na pytania dotyczące internetu. Gra składa się z dwóch"+
+//         " poziomów. Rzucasz kostką i posuwasz się do przodu o tyle pól, ile oczek"+
+//         " wyrzuciła kostka. Na początku gry otrzymujesz trzy szanse.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+//         " Na polach oznaczonych znakiem zapytania &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; czeka Cię pytanie." + 
+//         " Każda błędna odpowiedź - to strata 1 szansy. Utrata wszystkich szans" + 
+//         " oznacza zakończenie gry. Dobra odpowiedź - to kolejny rzut kostką" + 
+//         " Po drodze czekają Cię zasadzki kryjące się na polach oznaczonych" + 
+//         " wykrzyknikiem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Powodzenia!"
+
 const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść, musisz odpowiedzieć "+
        " prawidłowo na pytania dotyczące internetu. Gra składa się z dwóch"+
         " poziomów. Rzucasz kostką i posuwasz się do przodu o tyle pól, ile oczek"+
-        " wyrzuciła kostka. Na początku gry otrzymujesz trzy szanse.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
-        " Na polach oznaczonych znakiem zapytania &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; czeka Cię pytanie." + 
-        " Każda błędna odpowiedź - to strata 1 szansy. Utrata wszystkich szans" + 
+        " wyrzuciła kostka. Na początku gry otrzymujesz trzy szanse &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+        
+const textToDisplay2 = ".  Na polach oznaczonych znakiem zapytania &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+
+const textToDisplay3 = "czeka Cię pytanie." + " Każda błędna odpowiedź - to strata 1 szansy. Utrata wszystkich szans" + 
         " oznacza zakończenie gry. Dobra odpowiedź - to kolejny rzut kostką" + 
         " Po drodze czekają Cię zasadzki kryjące się na polach oznaczonych" + 
-        " wykrzyknikiem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Powodzenia!"
+        " wykrzyknikiem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+
+const textToDisplay4 = "."
 </script>
 <template>
   <div class="tlo1" aria-label="Zasady gry">
@@ -41,10 +55,13 @@ const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść,
         Po drodze czekają Cię zasadzki kryjące się na polach oznaczonych
         wykrzyknikiem. Powodzenia!
       </p> -->
-         <p class="instrukcja" v-html="textToDisplay"></p>
+         <span class="instrukcja"  v-html="textToDisplay"></span>
          <img class="gwiazdka" src="../assets/ikona1gwiazdka.png" />
+          <span class="instrukcja"  v-html="textToDisplay2"></span>
          <img class="pytajnik" src="../assets/ikona2question.png"/>
+          <span class="instrukcja"  v-html="textToDisplay3"></span>
          <img class="wykrzyknik" src="../assets/ikona3wykrzyknik.png" />
+         <span class="instrukcja"  v-html="textToDisplay4"></span>
     </div>
   </div>
   <button class="dalej anim1" @click="$emit('koniec-instrukcja')" @keydown.enter="$emit('koniec-instrukcja-focus')"
@@ -70,13 +87,25 @@ const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść,
   font-weight: 400;
   font-family: "Proxima Nova", sans-serif;
   line-height: 1.5;
-  top: 20px;
+  top: 5px;
   left: 705px;
 }
 
-.kontener-instrukcja {
+/* .kontener-instrukcja {
   display: flex;
   align-items: center;
+  padding: .5rem 1rem;
+   width: 1300px; 
+  width: 1400px;
+  top: 210px;
+  left: 260px;
+  position: absolute;
+} */
+
+.kontener-instrukcja {
+  /* display: flex;
+  align-items: center; */
+  display: inline-block;
   padding: .5rem 1rem;
   /* width: 1300px; */
   width: 1400px;
@@ -91,27 +120,44 @@ const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść,
   font-style: normal;
   font-weight: 300;
   font-family: "Proxima Nova", sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
   position: relative;
 
 }
 
+/* .instrukcja:focus{
+   outline:  0px solid #9a009e !important;
+} */
+
 .gwiazdka{
-  position: absolute;
-  top: 220px;
-  left: 746px;
+  position: relative;
+  /* top: 220px;
+  left: 746px; */
+  margin-top: -45px;
+  margin-right: -95px;
+  left: -95px;
+  top:35px
+  
 }
 
 .pytajnik{
-  position: absolute;
-   top: 283px;
-  left: 355px;
+  position: relative;
+   /* top: 283px;
+  left: 355px; */
+    margin-top: -38px;
+  margin-right: -80px;
+  left: -90px;
+  top:35px
 }
 
 .wykrzyknik{
-  position: absolute;
-  top: 475px;
-  left: 715px;
+  position: relative;
+  /* top: 475px;
+  left: 715px; */
+    margin-top: -38px;
+  margin-right: -80px;
+  left: -90px;
+  top:35px
 }
 
 .my-button {
@@ -144,7 +190,7 @@ const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść,
   font-weight: 700;
   font-family: "Proxima Nova", sans-serif;
   position: absolute;
-  top: 800px;
+  top: 820px;
   left: 850px;
   width: 301px;
   height: 117px;
