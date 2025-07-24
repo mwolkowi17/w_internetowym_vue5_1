@@ -34,11 +34,11 @@ const textToDisplay ="Znajdujesz się w Wirtualnej Dżungli - aby ją przejść,
 const textToDisplay2 = ".  Na polach oznaczonych znakiem zapytania &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 
 const textToDisplay3 = "czeka Cię pytanie." + " Każda błędna odpowiedź - to strata 1 szansy. Utrata wszystkich szans" + 
-        " oznacza zakończenie gry. Dobra odpowiedź - to kolejny rzut kostką" + 
-        " Po drodze czekają Cię zasadzki kryjące się na polach oznaczonych" + 
+        " oznacza zakończenie gry. Dobra odpowiedź - to kolejny rzut kostką." + 
+        " Po drodze czekają Cię zasadzki, kryjące się na polach oznaczonych" + 
         " wykrzyknikiem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 
-const textToDisplay4 = "."
+const textToDisplay4 = ". Powodzenia!"
 </script>
 <template>
   <div class="tlo1" aria-label="Zasady gry">
@@ -135,7 +135,7 @@ const textToDisplay4 = "."
   left: 746px; */
   margin-top: -45px;
   margin-right: -95px;
-  left: -95px;
+  left: -98px;
   top:35px
   
 }
