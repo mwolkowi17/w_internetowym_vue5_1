@@ -160,28 +160,6 @@ const textToDisplay4 = ". Powodzenia!"
   top:35px
 }
 
-.my-button {
-  transition: .2s ease-out;
-  /* overflow: visible; */
-}
-
-/* .my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-} */
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
 .dalej {
   /* background-image: url("../assets/przycisk_dalej_imie.png"); */
   color: rgb(29, 56, 80);

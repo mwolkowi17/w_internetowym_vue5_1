@@ -34,26 +34,6 @@ onMounted(() => {
     position: absolute;
 }
 
-.my-button{
-  transition: .2s ease-out;
-}
-
-.my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-}
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
 
 .level-one-button {
     /* background-image: url("../assets/poziom1_button.png"); */

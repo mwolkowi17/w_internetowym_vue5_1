@@ -469,27 +469,6 @@ li {
     left: 300px;
 }
 
-.my-button{
-  transition: .2s ease-out;
-}
-
-.my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-}
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .button-dalej {
     background-image: url("../assets/sprawdz_odpwowiedz_button1.png");
     color: rgb(255, 255, 255);

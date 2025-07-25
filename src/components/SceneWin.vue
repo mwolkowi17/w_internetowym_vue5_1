@@ -75,27 +75,6 @@ color: rgb(255, 255, 255);
   z-index: 2;
 }
 
-.my-button{
-  transition: .2s ease-out;
-}
-
-.my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-}
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .gram-jeszcze-1 {
     /* background-image: url("../assets/gram_jeszcze_raz_button.png"); */
      color: rgb(29, 56, 80);

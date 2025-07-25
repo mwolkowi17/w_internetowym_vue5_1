@@ -358,7 +358,7 @@ function clickWithMouse() {
     <div class="szansa4 szansa_ksztalt1" v-if="if_szansa4" role="img" alt="gwiazdka ikona szansy" aria-label="Szansa 4">
     </div>
     <button class="rzut2 my-button anim1" v-if="if_rzuc_kostka" @click="clickWithMouse" @keydown.enter="clickWithFocus"
-        role="button">Rzut kostką</button>
+        role="button">Rzuć kostką</button>
     <div class="kostka1" :class="{
         'kostka1image1': isSet1,
         'kostka1image2': isSet2,
@@ -445,27 +445,6 @@ function clickWithMouse() {
 
 .kostka1image6 {
     background-image: url("../assets/kostka_6oczek.png");
-}
-
-.my-button{
-  transition: .2s ease-out;
-}
-
-.my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-}
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .rzut2 {

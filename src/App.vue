@@ -21,7 +21,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <div :style="{ transform: `scale(${scale})`, transformOrigin: 'top left' }">
+   <!-- <div :style="{ transform: `scale(${scale})`, transformOrigin: 'top left' }" role="application"> -->
+    <div :style="{ transform: `scale(${scale})`, transformOrigin: 'top left' }">
       <MainComp  />
    </div>
    

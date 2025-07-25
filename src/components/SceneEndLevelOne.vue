@@ -86,27 +86,6 @@ fanfary.play();
     z-index: 2;
 }
 
-.my-button{
-  transition: .2s ease-out;
-}
-
-.my-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  inset: 0;
-  height: 130%;
-  width: 110%;
-  box-sizing: border-box;
-
-}
-
-.my-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .gram-jeszcze-1-level-one {
     /* background-image: url("../assets/gram_dalej1.png"); */
     color: rgb(29, 56, 80);
@@ -118,7 +97,7 @@ fanfary.play();
     background-position: -1px -1px;
     position: absolute;
     top: 650px;
-    left: 280px;
+    left: 320px;
     width: 583px;
     height: 192px;
     z-index: 3;
@@ -145,7 +124,7 @@ fanfary.play();
     background-position: -1px -1px;
     position: absolute;
     top: 650px;
-    left: 980px;
+    left: 995px;
     width: 583px;
     height: 192px;
     z-index: 3;
