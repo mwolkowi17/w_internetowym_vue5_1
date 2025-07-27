@@ -100,6 +100,13 @@ let ruch_lokalny = 0;
 
 let x;
 
+//instancja obieku odpowiadającego za pułapki
+    const trap = new Traps();
+
+// nowa funkcjonalnosc ograniczająca ilośc wpadek - zmienne sterujace - trzeba dodać dodawanie wartosci-liczba wpadek-przy pułapce!!!!
+const liczba_wyrzucona = ref(0)
+const liczba_wpadek = ref(0)
+
 const wyrzuconaWartoscKostki = ref("Kostka - liczba oczek: " + (x + 1));
 
 function kostka_click() {
@@ -110,7 +117,29 @@ function kostka_click() {
     //========================================================================================
     if_widok_kostki.value = true
     console.log("rzut")
-    x = metodyPomocnicze.rzucaj();
+
+    // nowa funkcjonalnosc ograniczająca ilośc wpadek  
+    let wartoscWyrzuconaFirst = metodyPomocnicze.rzucaj()
+    console.log("oczka: "+wartoscWyrzuconaFirst)
+    if(liczba_wpadek.value<2){
+    console.log("ilość wpadek: "+liczba_wpadek.value)
+    liczba_wyrzucona.value=wartoscWyrzuconaFirst
+    }
+    if(liczba_wpadek.value>=2&&trap.czy_polapka(krok_gracz1_na_planszy.value+wartoscWyrzuconaFirst+1)=== true){
+        console.log("zmieniam")
+        
+        if(wartoscWyrzuconaFirst<5){
+            liczba_wyrzucona.value=wartoscWyrzuconaFirst+1
+        }else{
+            liczba_wyrzucona.value=wartoscWyrzuconaFirst-1
+        }
+    }else{
+        console.log("ilość wpadek powyżej: "+liczba_wpadek.value)
+    liczba_wyrzucona.value=wartoscWyrzuconaFirst
+    }
+    //========================================koniec tej funcjonalnosci===============================================
+
+    x = liczba_wyrzucona.value
     wyrzuconaWartoscKostki.value = "Kostka - liczba oczek: " + (x + 1);
     let wynik_rzutu = x
     console.log(x)
@@ -202,8 +231,7 @@ function kostka_click() {
         console.log("krok na planszy: " + krok_gracz1_na_planszy.value);
     }
 
-    //instancja obieku odpowiadającego za pułapki
-    const trap = new Traps();
+    
 
     const pulapka_czy_quizz = () => {
         console.log("sprawdzam czy pułapka albo quizz");
@@ -219,6 +247,8 @@ function kostka_click() {
             //  tu w momencie kiedy gracz zanjdzie się na polu pułapka będzie go cofało a jak nie to odpala quizz
             if (trap.czy_polapka(krok_gracz1_na_planszy.value) === true) {
                 console.log("wpadka");
+                //dodaje wpadki do licznika wpadek
+                liczba_wpadek.value=liczba_wpadek.value+1
                 //  pokazuje planszę pułapki
                 setTimeout(() => {
                     if_widok_pulapki.value = true;
