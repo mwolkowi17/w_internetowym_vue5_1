@@ -268,7 +268,7 @@ onMounted(async () => {
 
 
 <template>
-    <div>
+    <div lang="pl" role="application">
         <ScenaStart v-if="if_plansza_poczatkowa" @koniec-planszy="change()" @instrukcja-focus="changeFocusOn" />
         <SceneInstruction v-if="if_instrukcja" @koniec-instrukcja="change_instrukcja()"
             @koniec-instrukcja-focus="changeInstrukcjaFocusOn" :ifButtonOnFocus="ifInstructionFocusOn" />

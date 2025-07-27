@@ -391,6 +391,9 @@ function clickWithMouse(){
 </script>
 <template>
     <div class="tlo2" role="img" alt="tło" aria-label="gra planszowa - poziom1"></div>
+    <div class="ikona-start" role="img" alt="ikona" aria-label="miejsce startu gry"></div>
+    <div class="trasa" role="img" alt="grafika" aria-label="trasa gry zawierająca 16 pól"></div>
+    <div class="ikona-meta" role="img" alt="ikona" aria-label="miejsce mety gry"></div>
     <div class="pionek1" :style="{ left: pionek_left + 'px', top: pionek_top + 'px' }" role="img" alt="ikona"
         aria-label="Pionek"></div>
     <h3 class="szanse-napis">szanse:</h3>
@@ -423,6 +426,43 @@ function clickWithMouse(){
     left: 0px;
     position: absolute;
 }
+
+.ikona-start {
+    background-image: url("../assets/start_poziom1.png");
+    background-size: 255px 305px;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 305px;
+    width: 255px;
+    top: -18px;
+    left: 23px;
+    z-index: 0;
+}
+
+.trasa{
+    background-image: url("../assets/sama_plansza.png");
+    background-size: 1280px 799px;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 799px;
+    width: 1280px;
+    top: 155px;
+    left: 0px;
+    z-index: 0;
+}
+
+.ikona-meta{
+    background-image: url("../assets/meta_poziom1.png");
+    background-size: 267px 288px;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 288px;
+    width: 267px;
+    top: 482px;
+    left: 1133px;
+    z-index: 0;
+}
+
 
 .pionek1 {
     background-image: url("../assets/pionek1.png");
