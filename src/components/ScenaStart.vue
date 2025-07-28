@@ -28,7 +28,7 @@ function openFullscreen() {
   <div ref="stageParent" class="tlo" role="img" alt="plansza startu gry" aria-label="W internetowym labiryncie">
   </div>
   <button class="start my-button" @click="$emit('koniec-planszy')" @keydown.enter="$emit('instrukcja-focus')"
-    role="button">START</button>
+    role="button">Start</button>
 </template>
 
 <style scoped>

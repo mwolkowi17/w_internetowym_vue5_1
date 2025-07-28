@@ -98,7 +98,7 @@ export class Quests {
         pytanie: 7,
         odpowiedz_text: [
           ["małpę", "węża", 1],
-          ["węża", "małpa", 2],
+          ["węża", "małpę", 2],
         ],
         odpowiedz: 1,
         tresc: "W Polsce symbol mała litera a wpisana w okrąg oznacza:",
