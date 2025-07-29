@@ -30,8 +30,8 @@ function koniecPulapki() {
 </script>
 <template>
   <div class="pulapka1">
-    <p class="naglowek">ZASADZKA!</p>
-    <p class="napis">Cofasz się o dwa pola.</p>
+    <h2 class="naglowek">ZASADZKA!</h2>
+    <h3 class="napis">Cofasz się o dwa pola.</h3>
   </div>
   <button class="przycisk_pulapka1 my-button anim1" @click="$emit('koniec-pulapka'); koniecPulapki()" @keydown.enter="$emit('koniec-pulapka-focus')" role="button">Dalej</button>
 </template>

@@ -16,7 +16,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="tlo-level2" role="img" alt="tło" aria-label="plansza wyboru poziomu"></div>
+    <div class="tlo-level2" role="img" alt="tło" aria-label="plansza wyboru poziomu">
+         <h1 class="sr-only">Wybór poziomu</h1>
+    </div>
         <button class="level-one-button my-button" @click="$emit('wybor-levelu1')" @keydown.enter="$emit('wybor-levelu1-focus')" role="button" 
             aria-label="wybierz poziom jeden">Poziom 1</button>
         <button class="level-two-button my-button" @click="$emit('wybor-levelu2')" @keydown.enter="$emit('wybor-levelu2-focus')" role="button" 
@@ -34,6 +36,18 @@ onMounted(() => {
     position: absolute;
 }
 
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 .level-one-button {
     /* background-image: url("../assets/poziom1_button.png"); */

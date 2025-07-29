@@ -374,13 +374,14 @@ function clickWithMouse() {
 }
 </script>
 <template>
-    <div class="tlo_main2" role="img" alt="tło" aria-label="gra planszowa - poziom 2"></div>
+     <h1 class="sr-only">Gra planszowa - poziom 2</h1>
+    <div class="tlo_main2" role="img" aria-label="gra planszowa - poziom 2"></div>
      <div class="ikona-start" role="img" alt="ikona" aria-label="miejsce startu gry"></div>
     <div class="trasa" role="img" alt="grafika" aria-label="trasa gry zawierająca 16 pól"></div>
     <div class="ikona-meta" role="img" alt="ikona" aria-label="miejsce mety gry"></div>
     <div class="pionek1" :style="{ left: pionek_left + 'px', top: pionek_top + 'px' }" role="img" alt="pionek"
         aria-label="Pionek"></div>
-    <h3 class="szanse-napis">szanse:</h3>
+    <h2 class="szanse-napis">szanse:</h2>
     <div class="szansa1 szansa_ksztalt1" v-if="if_szansa1" role="img" alt="gwiazdka ikona szansy" aria-label="Szansa 1">
     </div>
     <div class="szansa2 szansa_ksztalt1" v-if="if_szansa2" role="img" alt="gwiazdka ikona szansy" aria-label="Szansa 2">
@@ -428,6 +429,19 @@ function clickWithMouse() {
     top: -18px;
     left: 23px;
     z-index: 0;
+}
+
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .trasa{

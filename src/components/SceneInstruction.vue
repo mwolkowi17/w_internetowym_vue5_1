@@ -56,11 +56,11 @@ const textToDisplay4 = ". Powodzenia!"
         wykrzyknikiem. Powodzenia!
       </p> -->
          <span class="instrukcja"  v-html="textToDisplay"></span>
-         <img class="gwiazdka" src="../assets/ikona1gwiazdka.png" />
+         <img class="gwiazdka" alt="" src="../assets/ikona1gwiazdka.png" />
           <span class="instrukcja"  v-html="textToDisplay2"></span>
-         <img class="pytajnik" src="../assets/ikona2question.png"/>
+         <img class="pytajnik" alt="" src="../assets/ikona2question.png"/>
           <span class="instrukcja"  v-html="textToDisplay3"></span>
-         <img class="wykrzyknik" src="../assets/ikona3wykrzyknik.png" />
+         <img class="wykrzyknik" alt="" src="../assets/ikona3wykrzyknik.png" />
          <span class="instrukcja"  v-html="textToDisplay4"></span>
     </div>
   </div>

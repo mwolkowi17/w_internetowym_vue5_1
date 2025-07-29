@@ -20,7 +20,7 @@ fanfary.play();
 
 <template>
     <div class="plansza-win-level-one">
-        <p class="naglowek">BRAWO!</p>
+        <h1 class="naglowek">BRAWO!</h1>
         <p class="napis">Udało Ci się ukończyć <b>Poziom 1.</b></p>
         <p class="napis-2">Chcesz grać dalej?</p>
     </div>

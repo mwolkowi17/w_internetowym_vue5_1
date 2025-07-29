@@ -390,10 +390,11 @@ function clickWithMouse(){
 }
 </script>
 <template>
-    <div class="tlo2" role="img" alt="tło" aria-label="gra planszowa - poziom1"></div>
-    <div class="ikona-start" role="img" alt="ikona" aria-label="miejsce startu gry"></div>
+    <h1 class="sr-only">Gra planszowa - poziom 1</h1>
+    <div class="tlo2" role="img" aria-label="gra planszowa - poziom1"></div>
+    <div class="ikona-start" role="img" alt="" ></div>
     <div class="trasa" role="img" alt="grafika" aria-label="trasa gry zawierająca 16 pól"></div>
-    <div class="ikona-meta" role="img" alt="ikona" aria-label="miejsce mety gry"></div>
+    <div class="ikona-meta" role="img" alt=""></div>
     <div class="pionek1" :style="{ left: pionek_left + 'px', top: pionek_top + 'px' }" role="img" alt="ikona"
         aria-label="Pionek"></div>
     <h3 class="szanse-napis">szanse:</h3>
@@ -437,6 +438,18 @@ function clickWithMouse(){
     top: -18px;
     left: 23px;
     z-index: 0;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .trasa{

@@ -170,9 +170,12 @@ function sprawdzOdpowiedz() {
 </script>
 <template>
     <div class="planszaQuizz1 " :class="eksp1[quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).pytanie]"
-        role="img" alt="tło" aria-label="pytanie"></div>
+        role="img" aria-label="pytanie">
+      <h1 class="sr-only">Quizz</h1>
+    </div>
+       
     <!-- <div class="planszaQuizz1 " :class="eksp1[9]"></div> -->
-    <p class="pytanie1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</p>
+    <h2 class="pytanie1">{{ quizz_assets_data.pokaz_zadanie_2(props.miejsceNaPlanszy).tresc }}</h2>
     <ul class="lista-odpowiedzi" role="list">
         <li>
             <div class="pojedyncza-odpowiedz" role="checkbox" tabindex="0" :aria-checked="zaznaczenieOdpowiedzi1"
@@ -269,6 +272,18 @@ function sprawdzOdpowiedz() {
     position: absolute;
     left: 0px;
     top: 100px;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .planszaQuizz1nr1 {
