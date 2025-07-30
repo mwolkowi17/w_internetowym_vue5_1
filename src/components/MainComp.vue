@@ -130,11 +130,15 @@ function koniec_etapu1_focus() {
     if (if_main1.value) {
         if_main1.value = true;
         //if_level_two_choise.value = true;
+         setTimeout(()=>{
+      if_end_scene_level_one.value = true;
+    })
 
-        if_end_scene_level_one.value = true;
     } else {
-        ifWinFocusOn.value = true
+        setTimeout(()=>{
+        ifWinFocusOn.value=true
         if_win.value = true;
+         })
     }
 }
 

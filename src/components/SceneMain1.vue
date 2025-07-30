@@ -35,7 +35,7 @@ const postac1 = ref("postać")
 const krok_gracz1_na_planszy = ref(0);
 
 //roboczo do edycji pytań
-//const krok_gracz1_na_planszy = ref(12);
+//const krok_gracz1_na_planszy = ref(15);
 
 //zdefinowanie pozycji (mapy wszystkich pozycji) gracza nr 1
 const pozycje_pionka_gracza1 = new PawnMaps().pionek_gracza1;
@@ -281,33 +281,47 @@ function kostka_click() {
 }
 
 const koniecQuizu = () => {
-    if_rzuc_kostka.value = true
+   if (krok_gracz1_na_planszy.value < 15) {
+        if_rzuc_kostka.value = true
 
-    const buttonRzutVis = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(document.querySelector(".rzut1"))
-        }, 300);
-    })
-    // if (ifRzucKostkaButtonOnFocus === true) {
-    //     buttonRzutVis.then((res) => {
-    //         res.focus()
-    //     })
-    // }
+        const buttonRzutVis = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(document.querySelector(".rzut1"))
+            }, 300);
+        })
+    }
+
+    if (krok_gracz1_na_planszy.value === 15) {
+        if_rzuc_kostka.value = false
+        console.log("plansza win level!")
+        emit('koniec-etap1')
+     
+    }
 }
 
 const koniecQuizuFocusOn=()=>{
-    if_rzuc_kostka.value = true
+     if (krok_gracz1_na_planszy < 15) {
+        if_rzuc_kostka.value = true
 
-    const buttonRzutVis = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(document.querySelector(".rzut1"))
-        }, 300);
-    })
-  
+        const buttonRzutVis = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(document.querySelector(".rzut1"))
+            }, 300);
+        })
+
         buttonRzutVis.then((res) => {
             res.focus()
         })
-    
+    }
+
+    if (krok_gracz1_na_planszy.value === 15) {
+        if_rzuc_kostka.value = false
+        console.log("plansza win level focus!")  
+        ifFocusEmitGlobal.value = true
+        emit('koniec-etap1-focus')
+        
+    }
+
 }
 
 const koniecPulapki = () => {

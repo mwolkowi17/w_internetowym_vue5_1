@@ -271,6 +271,7 @@ function kostka_click() {
 }
 
 const koniecQuizu = () => {
+     if (krok_gracz1_na_planszy < 15) {
     if_rzuc_kostka.value = true
 
     const buttonRzutVis = new Promise((resolve, reject) => {
@@ -282,7 +283,16 @@ const koniecQuizu = () => {
     //buttonRzutVis.then((res) => { res.focus() })
 }
 
+    if (krok_gracz1_na_planszy.value === 15) {
+        if_rzuc_kostka.value = false
+        console.log("plansza win!")
+        emit('koniec-etap2')
+     
+    }
+}
+
 const koniecQuizuFocusOn = () => {
+     if (krok_gracz1_na_planszy < 15) {
     if_rzuc_kostka.value = true
 
     const buttonRzutVis = new Promise((resolve, reject) => {
@@ -292,6 +302,13 @@ const koniecQuizuFocusOn = () => {
     })
 
     buttonRzutVis.then((res) => { res.focus() })
+}
+if(krok_gracz1_na_planszy.value === 15) {
+        if_rzuc_kostka.value = false
+        console.log("plansza win focus!")  
+        ifFocusEmitGlobal.value = true
+        emit('koniec-etap2-focus')
+}
 }
 
 const koniecPulapki = () => {
