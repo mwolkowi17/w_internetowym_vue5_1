@@ -271,7 +271,7 @@ function kostka_click() {
 }
 
 const koniecQuizu = () => {
-     if (krok_gracz1_na_planszy < 15) {
+     if (krok_gracz1_na_planszy.value < 15) {
     if_rzuc_kostka.value = true
 
     const buttonRzutVis = new Promise((resolve, reject) => {
@@ -292,7 +292,7 @@ const koniecQuizu = () => {
 }
 
 const koniecQuizuFocusOn = () => {
-     if (krok_gracz1_na_planszy < 15) {
+     if (krok_gracz1_na_planszy.value < 15) {
     if_rzuc_kostka.value = true
 
     const buttonRzutVis = new Promise((resolve, reject) => {
